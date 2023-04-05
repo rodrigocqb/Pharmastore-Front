@@ -35,6 +35,7 @@ export default function ProductList() {
           name={v.name}
           image={v.image}
           price={v.price}
+          category={v.category}
         />
       ))}
     </Container>

@@ -39,6 +39,7 @@ export default function SearchResult() {
               name={v.name}
               image={v.image}
               price={v.price}
+              category={v.category}
             />
           ))}
         </Container>
