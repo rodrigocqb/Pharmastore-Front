@@ -7,7 +7,7 @@ export async function getAllProducts(): Promise<IProduct[]> {
 }
 
 export async function getProductData(id: string): Promise<IProduct> {
-  const response = await get(`/${id}`);
+  const response = await get(`/products/${id}`);
   return response.data as IProduct;
 }
 

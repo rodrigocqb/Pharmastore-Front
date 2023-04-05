@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import ProductData from "./pages/ProductData";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
           <Route
             path="/"
             element={<Home />}
+          />
+          <Route
+            path="/product/:id"
+            element={<ProductData />}
           />
         </Routes>
       </BrowserRouter>

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import IProduct from "../../interfaces/IProduct";
 
@@ -7,10 +8,15 @@ export default function Product({
   price,
   image,
 }: Omit<IProduct, "category">) {
+  const navigate = useNavigate();
+
   return (
     <Container>
-      <img src={image} />
-      <p>{name}</p>
+      <img
+        src={image}
+        onClick={() => navigate(`/product/${_id}`)}
+      />
+      <p onClick={() => navigate(`/product/${_id}`)}>{name}</p>
       <h3>R$ {price},00</h3>
       <CartButton>Adicionar ao Carrinho</CartButton>
     </Container>
@@ -31,11 +37,13 @@ const Container = styled.div`
   img {
     width: 200px;
     height: 200px;
+    cursor: pointer;
   }
 
   p {
     font-size: 18px;
     font-weight: 700;
+    cursor: pointer;
   }
 
   h3 {
@@ -43,7 +51,7 @@ const Container = styled.div`
   }
 `;
 
-const CartButton = styled.div`
+export const CartButton = styled.div`
   margin-top: 10px;
   width: 200px;
   height: 30px;
