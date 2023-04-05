@@ -7,11 +7,11 @@ export async function getAllProducts(): Promise<IProduct[]> {
 }
 
 export async function getProductData(id: string): Promise<IProduct> {
-  const response = await get(`/products/${id}`);
+  const response = await get(`/products/product/${id}`);
   return response.data as IProduct;
 }
 
 export async function searchProducts(query: string): Promise<IProduct[]> {
-  const response = await get(`/search?searchParam=${query}`);
+  const response = await get(`/products/search?searchParam=${query}`);
   return response.data as IProduct[];
 }

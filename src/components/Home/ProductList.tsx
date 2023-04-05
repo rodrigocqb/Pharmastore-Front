@@ -17,10 +17,10 @@ export default function ProductList() {
   });
 
   useEffect(() => {
-    if (currentList.length === 0 && data !== undefined) {
+    if (data !== undefined) {
       setCurrentList(data);
     }
-  }, []);
+  }, [data]);
 
   if (isLoading) {
     return <></>;

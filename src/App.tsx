@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductData from "./pages/ProductData";
+import SearchResult from "./pages/SearchResult";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
           <Route
             path="/product/:id"
             element={<ProductData />}
+          />
+          <Route
+            path="/search"
+            element={<SearchResult />}
           />
         </Routes>
       </BrowserRouter>
