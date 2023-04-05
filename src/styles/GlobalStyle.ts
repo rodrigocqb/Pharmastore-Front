@@ -51,13 +51,17 @@ table {
   }
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #191b18;
-    color: #ffffff;
+    background-color: #f2f2f2;
+    color: #000000;
   }
   *:focus {
     outline: none;
   }
   a {
     text-decoration: none;
+  }
+  main {
+	display: flex;
+	width: 100%;
   }
 `;

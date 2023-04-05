@@ -1,3 +1,9 @@
+import Categories from "../components/Categories";
+
 export default function Home() {
-  return <></>;
+  return (
+    <main>
+      <Categories />
+    </main>
+  );
 }
