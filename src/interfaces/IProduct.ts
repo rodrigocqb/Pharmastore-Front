@@ -6,7 +6,7 @@ export default interface IProduct {
   category: Category;
 }
 
-type Category = {
+export type Category = {
   _id: string;
   name: string;
 };
