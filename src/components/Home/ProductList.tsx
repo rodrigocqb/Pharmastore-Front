@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
 import IProduct from "../../interfaces/IProduct";
@@ -15,6 +15,12 @@ export default function ProductList() {
       }
     },
   });
+
+  useEffect(() => {
+    if (currentList.length === 0 && data !== undefined) {
+      setCurrentList(data);
+    }
+  }, []);
 
   if (isLoading) {
     return <></>;

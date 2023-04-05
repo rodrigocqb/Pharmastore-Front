@@ -14,6 +14,7 @@ export default function Product({
     <Container>
       <img
         src={image}
+        alt=""
         onClick={() => navigate(`/product/${_id}`)}
       />
       <p onClick={() => navigate(`/product/${_id}`)}>{name}</p>
@@ -63,4 +64,5 @@ export const CartButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
