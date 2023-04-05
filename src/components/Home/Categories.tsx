@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import styled from "styled-components";
-import { getCategories } from "../services/categoryServices";
+import { getCategories } from "../../services/categoryServices";
 
 export default function Categories() {
   const { data, isLoading } = useQuery("categories", getCategories);
