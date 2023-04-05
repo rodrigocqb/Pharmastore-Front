@@ -63,5 +63,7 @@ table {
   main {
 	display: flex;
 	width: 100%;
+	justify-content: space-between;
+	padding: 25px;
   }
 `;
