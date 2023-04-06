@@ -31,8 +31,8 @@ npm i
 ```bash
 npm run dev
 ```
-9. You can optionally build the project with
+9. You can optionally build and run the project with
 ```bash
-npm run build
+npm run build && npm start
 ```
 10. Finally access http://localhost:5173 on any browser
