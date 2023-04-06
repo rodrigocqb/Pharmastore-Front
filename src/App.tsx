@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import ProductData from "./pages/ProductData";
 import SearchResult from "./pages/SearchResult";
@@ -24,6 +25,10 @@ function App() {
           <Route
             path="/search"
             element={<SearchResult />}
+          />
+          <Route
+            path="/cart"
+            element={<Cart />}
           />
         </Routes>
       </BrowserRouter>

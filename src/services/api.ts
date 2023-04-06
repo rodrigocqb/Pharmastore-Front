@@ -7,7 +7,7 @@ const instance = axios.create({
 export type RequestPromise = Promise<AxiosResponse<any, any>>;
 
 export async function get(url: string, config?: AxiosRequestConfig<any>) {
-  const promise = instance.get(url);
+  const promise = instance.get(url, config);
   return promise as RequestPromise;
 }
 
@@ -17,6 +17,6 @@ export async function post(url: string, data: any) {
 }
 
 export async function deleteReq(url: string, config?: AxiosRequestConfig<any>) {
-  const promise = instance.delete(url);
+  const promise = instance.delete(url, config);
   return promise as RequestPromise;
 }

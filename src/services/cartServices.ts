@@ -3,9 +3,8 @@ import { CreateCartItem, ICartItem } from "../interfaces/ICartItem";
 import { deleteReq, get, post } from "./api";
 
 export async function getCart(): Promise<ICartItem[]> {
-  const response = await get("/carts", {
-    headers: { Authorization: getIdentifier() },
-  });
+  const config = { headers: { Authorization: getIdentifier() } };
+  const response = await get("/carts", config);
   return response.data as ICartItem[];
 }
 
